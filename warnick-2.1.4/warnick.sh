@@ -704,7 +704,7 @@ while IFS="" read -r line || [ -n "$line" ]; do
   # If a file was downloaded, only scan links if we are not beyond maxdepth...
   if [[ ! -z "$downloadedfile" && "$depth" -lt "$maxdepth" ]]; then
     # and only on specific filetypes...
-    if [[ "$filename" == *.html || "$filename" == *.htm || "$filename" == *.asp || "$filename" == *.shtml || "$filename" == *.php || "$filename" == *.cgi || "$filename" == *.jsp || "$filename" == *.php3 || "$filename" == *.aspx ]]; then
+    if [[ "$filename" == *.html || "$filename" == *.htm || "$filename" == *.asp || "$filename" == *.shtml || "$filename" == *.php || "$filename" == *.cgi || "$filename" == *.jsp || "$filename" == *.php3 || "$filename" == *.aspx || "$filename" == *.cfm || "$filename" == *.gsp ]]; then
       # and only if the file actually exists.
       if [[ -f "./sites/$host/$path$filename" ]]; then
         scanlinks "./sites/$host/$path$filename"
